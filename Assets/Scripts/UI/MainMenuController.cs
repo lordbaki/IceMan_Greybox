@@ -7,15 +7,20 @@ public class MainMenuController : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject controlsPanel;
+    public GameObject creditsPanel;
 
     public GameObject playButton;
     public GameObject controlsButton;
-    public GameObject backButton;
+    public GameObject creditsButton;
+
+    public GameObject controlsBackButton;
+    public GameObject creditsBackButton;
 
     void Start()
     {
         mainMenuPanel.SetActive(true);
         controlsPanel.SetActive(false);
+        creditsPanel.SetActive(false);
 
         SelectButton(playButton);
     }
@@ -25,7 +30,6 @@ public class MainMenuController : MonoBehaviour
         bool backPressed = false;
         bool escapePressed = false;
 
-        // Xbox B / PlayStation Circle
         if (Gamepad.current != null &&
             Gamepad.current.buttonEast.wasPressedThisFrame)
         {
@@ -38,18 +42,22 @@ public class MainMenuController : MonoBehaviour
             escapePressed = true;
         }
 
-        // Controls page -> return to menu
         if (controlsPanel.activeSelf)
         {
             if (backPressed || escapePressed)
-            {
                 CloseControls();
-            }
 
             return;
         }
 
-        // Main menu -> Escape quits
+        if (creditsPanel.activeSelf)
+        {
+            if (backPressed || escapePressed)
+                CloseCredits();
+
+            return;
+        }
+
         if (escapePressed)
         {
             QuitGame();
@@ -64,9 +72,10 @@ public class MainMenuController : MonoBehaviour
     public void OpenControls()
     {
         mainMenuPanel.SetActive(false);
+        creditsPanel.SetActive(false);
         controlsPanel.SetActive(true);
 
-        SelectButton(backButton);
+        SelectButton(controlsBackButton);
     }
 
     public void CloseControls()
@@ -75,6 +84,23 @@ public class MainMenuController : MonoBehaviour
         mainMenuPanel.SetActive(true);
 
         SelectButton(controlsButton);
+    }
+
+    public void OpenCredits()
+    {
+        mainMenuPanel.SetActive(false);
+        controlsPanel.SetActive(false);
+        creditsPanel.SetActive(true);
+
+        SelectButton(creditsBackButton);
+    }
+
+    public void CloseCredits()
+    {
+        creditsPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
+
+        SelectButton(creditsButton);
     }
 
     public void QuitGame()
@@ -88,6 +114,9 @@ public class MainMenuController : MonoBehaviour
 
     private void SelectButton(GameObject button)
     {
+        if (EventSystem.current == null || button == null)
+            return;
+
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(button);
     }
