@@ -15,6 +15,11 @@ public class PlayerCarController : MonoBehaviour
     public float selfRightSpeed = 5f;
     public float selfRightMinAngle = 3f;
 
+    [Header("Jump Audio")]
+    public AudioSource jumpAudioSource;
+    public AudioClip jumpSound;
+    public AudioClip doubleJumpSound;
+
     private Rigidbody rb;
     private Collider carCollider;
 
@@ -108,7 +113,6 @@ public class PlayerCarController : MonoBehaviour
         // -------------------------
         // GROUND MOVEMENT
         // -------------------------
-
         if (grounded)
         {
             float force =
@@ -227,6 +231,13 @@ public class PlayerCarController : MonoBehaviour
                 Vector3.up * hopForce,
                 ForceMode.Impulse
             );
+
+            AudioClip clip = hopsRemaining == 2
+                ? jumpSound
+                : (doubleJumpSound != null ? doubleJumpSound : jumpSound);
+
+            if (jumpAudioSource != null && clip != null)
+                jumpAudioSource.PlayOneShot(clip);
 
             hopsRemaining--;
         }

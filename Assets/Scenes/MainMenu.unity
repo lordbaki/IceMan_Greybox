@@ -480,6 +480,7 @@ GameObject:
   - component: {fileID: 239048307}
   - component: {fileID: 239048306}
   - component: {fileID: 239048310}
+  - component: {fileID: 239048311}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -613,6 +614,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956631baa3c584845a59b161dc112d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverSelect
+--- !u!114 &239048311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239048305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b500e957b9f0d894d9586ad41532dce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  navigationSound: {fileID: 8300000, guid: f9e2b72fdd3ef844c83b66ba5584d97a, type: 3}
+  selectionSound: {fileID: 8300000, guid: 9747f012532cc73458655b63c237227c, type: 3}
+  navigationVolume: 0.6
+  selectionVolume: 0.7
 --- !u!1 &362253304
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +718,7 @@ GameObject:
   - component: {fileID: 495544066}
   - component: {fileID: 495544065}
   - component: {fileID: 495544068}
+  - component: {fileID: 495544070}
   m_Layer: 5
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -834,6 +852,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 495544064}
   m_CullTransparentMesh: 1
+--- !u!114 &495544070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495544064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b500e957b9f0d894d9586ad41532dce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  navigationSound: {fileID: 8300000, guid: f9e2b72fdd3ef844c83b66ba5584d97a, type: 3}
+  selectionSound: {fileID: 8300000, guid: 9747f012532cc73458655b63c237227c, type: 3}
+  navigationVolume: 0.6
+  selectionVolume: 0.7
 --- !u!1 &501261300
 GameObject:
   m_ObjectHideFlags: 0
@@ -1356,6 +1390,7 @@ GameObject:
   - component: {fileID: 1166733980}
   - component: {fileID: 1166733979}
   - component: {fileID: 1166733983}
+  - component: {fileID: 1166733984}
   m_Layer: 5
   m_Name: ControlButton
   m_TagString: Untagged
@@ -1489,6 +1524,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956631baa3c584845a59b161dc112d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverSelect
+--- !u!114 &1166733984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166733978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b500e957b9f0d894d9586ad41532dce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  navigationSound: {fileID: 8300000, guid: f9e2b72fdd3ef844c83b66ba5584d97a, type: 3}
+  selectionSound: {fileID: 8300000, guid: 9747f012532cc73458655b63c237227c, type: 3}
+  navigationVolume: 0.6
+  selectionVolume: 0.7
 --- !u!1 &1204297804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,6 +1690,7 @@ GameObject:
   - component: {fileID: 1213063549}
   - component: {fileID: 1213063548}
   - component: {fileID: 1213063551}
+  - component: {fileID: 1213063552}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -1772,6 +1824,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956631baa3c584845a59b161dc112d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverSelect
+--- !u!114 &1213063552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213063546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b500e957b9f0d894d9586ad41532dce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  navigationSound: {fileID: 8300000, guid: f9e2b72fdd3ef844c83b66ba5584d97a, type: 3}
+  selectionSound: {fileID: 8300000, guid: 9747f012532cc73458655b63c237227c, type: 3}
+  navigationVolume: 0.6
+  selectionVolume: 0.7
 --- !u!1 &1263658902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,6 +2561,7 @@ GameObject:
   - component: {fileID: 1734930540}
   - component: {fileID: 1734930539}
   - component: {fileID: 1734930538}
+  - component: {fileID: 1734930542}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2626,6 +2695,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734930536}
   m_CullTransparentMesh: 1
+--- !u!114 &1734930542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734930536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b500e957b9f0d894d9586ad41532dce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  navigationSound: {fileID: 8300000, guid: f9e2b72fdd3ef844c83b66ba5584d97a, type: 3}
+  selectionSound: {fileID: 8300000, guid: 9747f012532cc73458655b63c237227c, type: 3}
+  navigationVolume: 0.6
+  selectionVolume: 0.7
 --- !u!1 &1801406896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,6 +2802,7 @@ GameObject:
   - component: {fileID: 1859365200}
   - component: {fileID: 1859365199}
   - component: {fileID: 1859365202}
+  - component: {fileID: 1859365203}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -2850,6 +2936,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956631baa3c584845a59b161dc112d79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HoverSelect
+--- !u!114 &1859365203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859365197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b500e957b9f0d894d9586ad41532dce7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuButtonAudio
+  navigationSound: {fileID: 8300000, guid: f9e2b72fdd3ef844c83b66ba5584d97a, type: 3}
+  selectionSound: {fileID: 8300000, guid: 9747f012532cc73458655b63c237227c, type: 3}
+  navigationVolume: 0.6
+  selectionVolume: 0.7
 --- !u!1 &1874075710
 GameObject:
   m_ObjectHideFlags: 0

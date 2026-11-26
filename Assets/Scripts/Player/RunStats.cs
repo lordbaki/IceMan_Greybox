@@ -5,8 +5,10 @@ public class RunStats : MonoBehaviour
     public float meltDamage;
     public float hammerDamage;
     public float landingDamage;
+    public float spikeDamage;
 
     public int hammerHits;
+    public int spikeHits;
     public float hardestLanding;
 
     public float runTime;
@@ -36,6 +38,15 @@ public class RunStats : MonoBehaviour
 
         if (impactSpeed > hardestLanding)
             hardestLanding = impactSpeed;
+    }
+
+    public void AddSpikeDamage(float amount)
+    {
+        if (finished || amount <= 0f)
+            return;
+
+        spikeDamage += amount;
+        spikeHits++;
     }
 
     public void FinishRun()

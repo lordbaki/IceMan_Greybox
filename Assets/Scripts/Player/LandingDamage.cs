@@ -60,7 +60,7 @@ public class LandingDamage : MonoBehaviour
         float iceBefore =
             iceCondition.currentIce;
 
-        iceCondition.TakeDamage(damage);
+        iceCondition.TakeDamage(damage, true);
 
         float actualDamage =
             iceBefore - iceCondition.currentIce;

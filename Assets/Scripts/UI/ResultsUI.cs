@@ -69,10 +69,18 @@ public class ResultsUI : MonoBehaviour
 
             "Landing Damage: " +
             runStats.landingDamage.ToString("F1") +
+            "\n" +
+
+            "Spike Damage: " +
+            runStats.spikeDamage.ToString("F1") +
             "\n\n" +
 
             "Hammer Hits: " +
             runStats.hammerHits +
+            "\n" +
+
+            "Spike Hits: " +
+            runStats.spikeHits +
             "\n" +
 
             "Hardest Landing: " +

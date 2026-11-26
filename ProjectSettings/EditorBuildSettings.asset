@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 48952d1da70e82c4d93097e1d650b58a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prototype_Level.unity
     guid: 0629f86483684de4282b8f845d62d102
+  - enabled: 1
+    path: Assets/Scenes/VerticalSlice_Level.unity
+    guid: dd70de542570d3448bc1b3591b4d5cbf
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

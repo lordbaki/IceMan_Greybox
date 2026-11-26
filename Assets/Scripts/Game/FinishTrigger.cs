@@ -11,7 +11,17 @@ public class FinishTrigger : MonoBehaviour
 
     public float stopDelay = 1.5f;
 
+    [Header("Victory Audio (Optional)")]
+    public AudioSource victoryAudio;
+    public AudioSource backgroundMusic;
+
     private bool finished = false;
+
+    private void Awake()
+    {
+        if (victoryAudio == null)
+            victoryAudio = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -67,6 +77,18 @@ public class FinishTrigger : MonoBehaviour
                 );
             }
         }
+
+        // Stop both the current music and any pending countdown music.
+        RaceCountdown countdown = FindFirstObjectByType<RaceCountdown>();
+
+        if (countdown != null)
+            countdown.StopBackgroundMusic();
+
+        if (backgroundMusic != null)
+            backgroundMusic.Stop();
+
+        if (victoryAudio != null && victoryAudio.clip != null)
+            victoryAudio.PlayOneShot(victoryAudio.clip);
 
         finishPanel.SetActive(true);
 

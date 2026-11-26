@@ -66,7 +66,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Prototype_Level");
+        SceneManager.LoadScene("VerticalSlice_Level");
     }
 
     public void OpenControls()
